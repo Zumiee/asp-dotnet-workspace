@@ -51,12 +51,9 @@ List<SongDto> songs = [
 
 // Get games/
 app.MapGet("games", () => games);
-app.MapGet("songs", () => songs);
 
 // Get games/1
 app.MapGet("games/{id}", (int id) => games.Find(game => game.Id == id));
 
-// Get songs/1
-app.MapGet("songs/{id}", (int id) => songs.Find(song => song.Id == id));
 
 app.Run();
