@@ -28,26 +28,6 @@ List<GameDto> games = [
 
 ];
 
-List<SongDto> songs = [
-    new (
-        1,
-        "I'd rather Pretend",
-        "Nice",
-        new DateOnly(2024, 7, 15)
-    ),
-    new(
-        2,
-        "Eastside",
-        "Niceu",
-        new DateOnly(2024, 8, 16)
-    ),
-    new(
-        3,
-        "Tanginamo",
-        "Tanginaka",
-        new DateOnly(2024, 9, 17)
-    ),
-];
 
 // Get games/
 app.MapGet("games", () => games);
