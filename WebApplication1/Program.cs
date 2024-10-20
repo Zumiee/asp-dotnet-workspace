@@ -18,13 +18,6 @@ List<GameDto> games = [
         20.99M,
         new DateOnly(2021, 7, 15)
     ),
-    new (
-        3,
-        "League of Legends",
-        "MOBA",
-        20.99M,
-        new DateOnly(2022, 7, 15)
-    ),
 
 ];
 
