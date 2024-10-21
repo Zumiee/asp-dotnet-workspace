@@ -1,7 +1,7 @@
 GET http://localhost:5189/games
 
 ###
-GET http://localhost:5189/games/3
+GET http://localhost:5189/games/1
 
 ###
 POST http://localhost:5189/games
@@ -14,3 +14,13 @@ Content-Type: application/json
     "releaseDate": "2002-05-18"
 }
 
+###
+PUT http://localhost:5189/games/1
+Content-Type: application/json
+
+{
+    "name": "Fucko",
+    "genre": "Fighting",
+    "price": 1.99,
+    "releaseDate": "2002-05-11"
+}
