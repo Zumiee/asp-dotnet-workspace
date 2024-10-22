@@ -8,9 +8,9 @@ POST http://localhost:5189/games
 Content-Type: application/json
 
 {
-    "name": "Kan2t",
-    "genre": "Sexual and Nudity",
-    "price": 0,
+    "name": "Stardew Valley",
+    "genre": "Farming Sim",
+    "price": 1.88,
     "releaseDate": "2002-05-18"
 }
 
@@ -19,8 +19,8 @@ PUT http://localhost:5189/games/1
 Content-Type: application/json
 
 {
-    "name": "Fucko",
-    "genre": "Fighting",
+    "name": "Mobile Legends",
+    "genre": "MOBA",
     "price": 1.99,
     "releaseDate": "2002-05-11"
 }
