@@ -1,4 +1,3 @@
-using System;
 using WebApplication1.Dtos;
 
 namespace WebApplication1.Endpoints;
@@ -30,10 +29,10 @@ public static class GameEndpoints
         var group = app.MapGroup("games");
         
         // GET /games/
-        group.MapGet("games", () => games);
+        group.MapGet("/", () => games);
 
         // GET /games/1
-        group.MapGet("games/{id}", (int id) => 
+        group.MapGet("/{id}", (int id) => 
         {
             GameDto? game = games.Find(game => game.Id == id);
 
@@ -42,7 +41,7 @@ public static class GameEndpoints
         .WithName(GetGameEndpointName);
 
         // POST /games
-        group.MapPost("games", (CreateGameDto newGame) => {
+        group.MapPost("/", (CreateGameDto newGame) => {
             GameDto game = new(
                 games.Count + 1,
                 newGame.Name,
@@ -57,7 +56,7 @@ public static class GameEndpoints
 
 
         // PUT /games
-        group.MapPut("games/{id}", (int id, UpdateGameDto updatedGame) => {
+        group.MapPut("/{id}", (int id, UpdateGameDto updatedGame) => {
             var index = games.FindIndex(game => game.Id == id); 
 
             if (index == -1) {
@@ -75,7 +74,7 @@ public static class GameEndpoints
             return Results.NoContent();
         });
 
-        group.MapDelete("games/{id}", (int id) => {
+        group.MapDelete("/{id}", (int id) => {
             games.RemoveAll(game => game.Id == id);
 
             return Results.NoContent();
