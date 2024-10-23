@@ -28,13 +28,6 @@ public static class GameEndpoints
             20.99M,
             new DateOnly(2021, 7, 15)
         ),
-        new (
-            4,
-            "Counter Strike 2",
-            "FPS",
-            20.99M,
-            new DateOnly(2021, 7, 15)
-        ),
 
     ];
 
